@@ -1,0 +1,33 @@
+
+@TOKEN_ID= eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWY3NjFjMjgzMzA0YTYwN2E1ZTFhYzEiLCJmdWxsbmFtZSI6eyJmaXJzdCI6InByb2plY3QiLCJsYXN0IjoiY29tcGxldGUifSwiZW1haWwiOiJwY0BnbWFpbC5jb20iLCJwcm9maWxlUGljdHVyZVBhdGgiOiJpbWFnZXMvZ3Vlc3QucG5nIiwiaWF0IjoxNzEwOTY5NjU5fQ.N8Lf6ucCVLkZ8bw-GmslkEgblOTZYH5mC_RADmp0EeI
+@COURSE_ID=65f8912c365b4e4ddc93815d
+POST http://localhost:3000/courses
+Content-Type:application/json
+Authorization: Bearer {{TOKEN_ID}}
+
+{"title":"SD200", "description":"Problem Solving"}
+
+###
+
+GET http://localhost:3000/courses?action=own
+Content-Type:application/json
+Authorization: Bearer {{TOKEN_ID}}
+### 
+
+GET http://localhost:3000/courses/{{COURSE_ID}}
+Content-Type:application/json
+Authorization: Bearer {{TOKEN_ID}}
+
+####
+
+PUT http://localhost:3000/courses/{{COURSE_ID}}
+Content-Type:application/json
+Authorization: Bearer {{TOKEN_ID}}
+
+{"title":"Biology","description":"The study of life"}
+
+###
+
+DELETE http://localhost:3000/courses/{{COURSE_ID}}
+Content-Type:application/json
+Authorization: Bearer {{TOKEN_ID}}

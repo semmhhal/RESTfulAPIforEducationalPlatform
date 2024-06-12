@@ -1,0 +1,29 @@
+@COURSE_ID=65f77041cdb500d662d729ba
+@LECTURE_ID=65f772d4ca97099c31d5299c
+@TOKEN_ID=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWY3NjFjMjgzMzA0YTYwN2E1ZTFhYzEiLCJmdWxsbmFtZSI6eyJmaXJzdCI6InByb2plY3QiLCJsYXN0IjoiY29tcGxldGUifSwiZW1haWwiOiJwY0BnbWFpbC5jb20iLCJwcm9maWxlUGljdHVyZVBhdGgiOiJpbWFnZXMvZ3Vlc3QucG5nIiwiaWF0IjoxNzEwNzEyODU1fQ.ZXxauEDhYIy3EuWGZvGRRsbzENwa1-vMNiHI7OwSxf4
+
+POST http://localhost:3000/courses/{{COURSE_ID}}/lectures
+Content-Type:application/json
+Authorization: Bearer {{TOKEN_ID}}
+
+{"title":"Prof SEM ", "description":"A lecture", "url":"www.sss.com"}
+
+###
+
+GET http://localhost:3000/courses/{{COURSE_ID}}/lectures
+Content-Type:application/json
+Authorization: Bearer {{TOKEN_ID}}
+
+####
+
+PUT http://localhost:3000/courses/{{COURSE_ID}}/lectures/{{LECTURE_ID}}
+Content-Type:application/json
+Authorization: Bearer {{TOKEN_ID}}
+
+{"title":"Prof Renuka", "description":"good lectures", "url":"www.good.com"}
+
+###
+
+DELETE http://localhost:3000/courses/{{COURSE_ID}}/lectures/{{LECTURE_ID}}
+Content-Type:application/json
+Authorization: Bearer {{TOKEN_ID}}

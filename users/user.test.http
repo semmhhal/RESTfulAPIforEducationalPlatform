@@ -1,0 +1,15 @@
+POST http://localhost:3000/users/signup
+Content-Type:application/json
+
+{"fullname":
+{"first":"projec11", "last":"complete"}, 
+"email": "pc@gmail.com", 
+"password":"pc123"
+}
+###
+POST http://localhost:3000/users/signin
+Content-Type:application/json
+
+{"email":"pc@gmail.com", "password":"pc123"}
+
+

@@ -1,0 +1,40 @@
+@USER_ID=65f761c283304a607a5e1ac1
+@PICTURENAME=image.jpeg
+@PICTURE_FORM_NAME=myfile
+@PICTURE_MIME_TYPE=image/jpeg
+
+@TOKEN_ID= eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWY3NjFjMjgzMzA0YTYwN2E1ZTFhYzEiLCJmdWxsbmFtZSI6eyJmaXJzdCI6InByb2plY3QiLCJsYXN0IjoiY29tcGxldGUifSwiZW1haWwiOiJwY0BnbWFpbC5jb20iLCJwcm9maWxlUGljdHVyZVBhdGgiOiJpbWFnZXMvZ3Vlc3QucG5nIiwiaWF0IjoxNzEwNzEyODU1fQ.ZXxauEDhYIy3EuWGZvGRRsbzENwa1-vMNiHI7OwSxf4
+
+POST http://localhost:3000/users/{{USER_ID}}/picture
+Authorization: Bearer {{TOKEN_ID}}
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="{{PICTURE_FORM_NAME}}"; filename="{{PICTURENAME}}"
+Content-Type: {{PICTURE_MIME_TYPE}}
+
+< ./{{PICTURENAME}}
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+#####
+
+DELETE http://localhost:3000/users/{{USER_ID}}/picture
+Authorization: Bearer {{TOKEN_ID}}
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="{{PICTURE_FORM_NAME}}"; filename="{{PICTURENAME}}"
+Content-Type: {{PICTURE_MIME_TYPE}}
+
+< ./{{PICTURENAME}}
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+###
+
+PATCH http://localhost:3000/users/{{USER_ID}}?action=deactivate_profile
+Authorization: Bearer {{TOKEN_ID}}
+Content-Type: application/json
+
+
+
+
