@@ -34,7 +34,7 @@ export type User = InferSchemaType<typeof UserSchema>;
 
 export const UserModel = model<User>('user', UserSchema)
 ```
-Implement the following REST routes:
+Implemented the following REST routes:
 * `POST /users/signup` Signup for a new account (remember to hash the password)
 * `POST /users/signin` Signin and send back in the response a JWT (contains the user id, fullname, email, and profile picture path)
   
@@ -76,7 +76,7 @@ Active users with valid tokens can use the application and perform CRUD operatio
 * `DELETE /courses/:course_id` Delete a course by course id (if they own the course: the token `_id` === course `created_by.user_id`)
 * `PUT /courses/:course_id` Update a course (title and description) by course id (if they own the course)
   
-And the following sub-entity routes:
+the following sub-entity routes:
 * `POST /courses/:course_id/lectures` Add a new lecture to a course (if they own the course)
 * `GET /courses/:course_id/lectures` List all lectures of a course
 * `PUT /courses/:course_id/lectures/:lecture_id` Update a lecture (title, description, and url) (if they own the course)
